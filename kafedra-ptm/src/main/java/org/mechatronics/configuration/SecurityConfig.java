@@ -41,7 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().authorizeRequests()
                 .antMatchers("/phases/add").hasAuthority("ADMIN")
                 .and().authorizeRequests()
-                .antMatchers("/login", "/resources/**", "/register")
+                .antMatchers("/", "/resources/**")
                 .permitAll().and().authorizeRequests()
                 .anyRequest().authenticated().and().csrf().disable();
     }
