@@ -5,11 +5,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class MainPageController {
-
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String index() {
-		return "index";
+public class NewsController {
+	@RequestMapping(value = "/news", method = RequestMethod.GET)
+	public String news() {
+		return "news";
 	}
-
 }
