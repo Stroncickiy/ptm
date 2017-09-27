@@ -1,9 +1,9 @@
 spring:
   jpa:
     database: POSTGRESQL
-    show-sql: false
+    show-sql: true
     hibernate:
-      ddl-auto: create-update
+      ddl-auto: create-drop
   datasource:
     url: ${JDBC_DATABASE_URL}
     username: root
