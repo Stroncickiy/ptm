@@ -3,10 +3,10 @@ spring:
     database: POSTGRESQL
     show-sql: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: create-update
   datasource:
     url: ${JDBC_DATABASE_URL}
-    username: root
+    username: postgres
     password: root
     driver-class-name: org.postgresql.Driver
   data:
