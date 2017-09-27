@@ -5,9 +5,12 @@ spring:
     database: MYSQL
     show-sql: false
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: create-update
   datasource:
-    url: "jdbc:mysql://localhost:3306/mentorship"
+    url: "jdbc:mysql://localhost:3306/ptm"
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
+  data:
+    rest:
+      base-path: /api

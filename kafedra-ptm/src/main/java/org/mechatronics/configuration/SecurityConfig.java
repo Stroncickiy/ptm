@@ -39,9 +39,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .passwordParameter("password")
                 .defaultSuccessUrl("/").and().authorizeRequests()
                 .and().authorizeRequests()
-                .antMatchers("/phases/add").hasAuthority("ADMIN")
+                .antMatchers("/admin/*").hasAuthority("ADMIN")
                 .and().authorizeRequests()
-                .antMatchers("/*", "/resources/**")
+                .antMatchers("/**", "/resources/**")
                 .permitAll().and().authorizeRequests()
                 .anyRequest().authenticated().and().csrf().disable();
     }
