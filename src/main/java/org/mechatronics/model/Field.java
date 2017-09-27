@@ -12,7 +12,6 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode
 @Entity
-@Table(name = "field")
 public class Field {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
