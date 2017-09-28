@@ -1,7 +1,7 @@
 package org.mechatronics.controller;
 
 import org.mechatronics.enums.UserRole;
-import org.mechatronics.model.User;
+import org.mechatronics.model.SiteUser;
 import org.mechatronics.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -36,14 +36,14 @@ public class AuthController {
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String openRegisterPage(Model model) {
-        model.addAttribute("newUser", new User());
+        model.addAttribute("newUser", new SiteUser());
         model.addAttribute("availableRoles", UserRole.values());
         return "register";
     }
 
     @RequestMapping(path = "/register", method = RequestMethod.POST)
-    public String createUser(@ModelAttribute("newUser") User user) {
-        userService.add(user);
+    public String createUser(@ModelAttribute("newUser") SiteUser siteUser) {
+        userService.add(siteUser);
         return "redirect:/";
     }
 

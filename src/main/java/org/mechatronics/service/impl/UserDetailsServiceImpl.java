@@ -1,12 +1,7 @@
 package org.mechatronics.service.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
-
 import org.mechatronics.enums.UserRole;
-import org.mechatronics.model.User;
+import org.mechatronics.model.SiteUser;
 import org.mechatronics.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -17,34 +12,43 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
 @Service("myUserDetailsService")
 @Transactional
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-	@Autowired
-	private UserService userSerivice;
+    @Autowired
+    private UserService userSerivice;
 
 
-	@Override
-	public UserDetails loadUserByUsername(final String email) throws UsernameNotFoundException {
+    @Override
+    public UserDetails loadUserByUsername(final String email) throws UsernameNotFoundException {
+        SiteUser siteUser = userSerivice.getUserByEmail(email);
+        if (siteUser != null) {
+            List<GrantedAuthority> authorities = buildUserAuthority(siteUser.getRoles());
+            return buildUserForAuthentication(siteUser, authorities);
+        } else {
+            throw new UsernameNotFoundException("username " + email + " not found in database");
+        }
 
-		User user = userSerivice.getUserByEmail(email);
-		List<GrantedAuthority> authorities = buildUserAuthority(user.getRoles());
 
-		return buildUserForAuthentication(user, authorities);
+    }
 
-	}
+    private org.springframework.security.core.userdetails.User buildUserForAuthentication(
+            SiteUser siteUser, List<GrantedAuthority> authorities) {
+        return new org.springframework.security.core.userdetails.User(siteUser.getEmail(),
+                siteUser.getPassword(), siteUser.isEnabled(), true, true, true, authorities);
+    }
 
-	private org.springframework.security.core.userdetails.User buildUserForAuthentication(User user,
-			List<GrantedAuthority> authorities) {
-		return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(),
-				user.isEnabled(), true, true, true, authorities);
-	}
-
-	private List<GrantedAuthority> buildUserAuthority(List<UserRole> userRoles) {
-		Set<GrantedAuthority> setAuths = userRoles.stream().map(userRole -> new SimpleGrantedAuthority(userRole.name()))
-				.collect(Collectors.toSet());
-		return new ArrayList<>(setAuths);
-	}
+    private List<GrantedAuthority> buildUserAuthority(List<UserRole> userRoles) {
+        Set<GrantedAuthority> setAuths =
+                userRoles.stream().map(userRole -> new SimpleGrantedAuthority(userRole.name()))
+                        .collect(Collectors.toSet());
+        return new ArrayList<>(setAuths);
+    }
 
 }

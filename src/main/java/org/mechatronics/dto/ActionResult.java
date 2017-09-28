@@ -4,5 +4,6 @@ import lombok.Data;
 
 @Data
 public class ActionResult {
-    public boolean success;
+    private boolean success;
+    private String info;
 }

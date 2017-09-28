@@ -1,9 +1,9 @@
 package org.mechatronics.service;
 
-import org.mechatronics.model.User;
+import org.mechatronics.model.SiteUser;
 
-public interface UserService extends CommonService<User> {
+public interface UserService extends CommonService<SiteUser> {
 
-	User getUserByEmail(String email);
+	SiteUser getUserByEmail(String email);
 
 }

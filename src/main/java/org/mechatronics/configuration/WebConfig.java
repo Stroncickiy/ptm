@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;
 import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.context.ApplicationContext;
@@ -21,12 +22,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @SpringBootApplication
-@EnableAutoConfiguration
 @EnableJpaRepositories(basePackages = "org.mechatronics.repositories")
 @ComponentScan(basePackages = "org.mechatronics.*")
 @PropertySources({@PropertySource("classpath:app.properties")})
 @EnableWebMvc
 @EntityScan(basePackages = "org.mechatronics.model")
+@EnableAutoConfiguration(exclude = {ErrorMvcAutoConfiguration.class})
 public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Autowired

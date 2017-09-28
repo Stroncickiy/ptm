@@ -7,25 +7,25 @@ import javax.persistence.EntityManager;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.mechatronics.dao.UserDAO;
-import org.mechatronics.model.User;
+import org.mechatronics.model.SiteUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class UserDAOImpl extends CommonDAOImpl<User> implements UserDAO {
+public class UserDAOImpl extends CommonDAOImpl<SiteUser> implements UserDAO {
 
 	@Autowired
 	public UserDAOImpl(EntityManager entityManager) {
-		super(User.class, entityManager);
+		super(SiteUser.class, entityManager);
 	}
 
 	@Override
 	@SuppressWarnings("unchecked")
-	public User getUserByEmail(String email) {
+	public SiteUser getUserByEmail(String email) {
 		Session session = ((Session) entityManager.getDelegate());
-		Query findByEmailQuery = session.createQuery("from User u  where u.email = :email ");
+		Query findByEmailQuery = session.createQuery("from SiteUser u  where u.email = :email AND u.enabled = true ");
 		findByEmailQuery.setParameter("email", email);
-		Iterator<User> iterate = findByEmailQuery.iterate();
+		Iterator<SiteUser> iterate = findByEmailQuery.iterate();
 		if (iterate.hasNext()) {
 			return iterate.next();
 		} else {

@@ -72,7 +72,7 @@
     -ms-touch-action: manipulation;
         touch-action: manipulation;
     cursor: pointer;
-    @include user-select(none);
+    @include siteUser-select(none);
 
     &:focus,
     &:active:focus,
@@ -137,12 +137,12 @@
 // User Select
 // --------------------------------------------------
 
-/* eg: @include user-select(none); */
-@mixin user-select($user-select) {
-    -webkit-user-select: ($user-select);
-    -moz-user-select: ($user-select);
-    -ms-user-select: ($user-select);
-    user-select: ($user-select);
+/* eg: @include siteUser-select(none); */
+@mixin siteUser-select($siteUser-select) {
+    -webkit-siteUser-select: ($siteUser-select);
+    -moz-siteUser-select: ($siteUser-select);
+    -ms-siteUser-select: ($siteUser-select);
+    siteUser-select: ($siteUser-select);
 }
 
 
