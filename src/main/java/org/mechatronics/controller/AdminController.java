@@ -13,4 +13,10 @@ public class AdminController {
         return "admin/index";
     }
 
+
+    @RequestMapping(value = "/fields", method = RequestMethod.GET)
+    public String fileds() {
+        return "admin/fields";
+    }
+
 }

@@ -60,7 +60,7 @@ public class SiteUser {
         if (userDTO.getPassword() != null) {
             setPassword(userDTO.getPassword());
         }
-        setEnabled(false);
+        setEnabled(userDTO.isEnabled());
         setRoles(Collections.singletonList(UserRole.ADMIN));
 
     }

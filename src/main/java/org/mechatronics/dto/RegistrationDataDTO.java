@@ -20,4 +20,5 @@ public class RegistrationDataDTO {
     private String password;
     @Size(min = 6)
     private String password2;
+    private boolean enabled;
 }
