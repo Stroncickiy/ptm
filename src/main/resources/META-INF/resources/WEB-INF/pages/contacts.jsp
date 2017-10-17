@@ -80,7 +80,7 @@
                 </div>
             </div>
             <div class="promo-section-img-right">
-                <img class="img-responsive" src="/resources/img/970x970/01.png" alt="Content Image">
+                <img class="img-responsive" src="/resources/img/970x970/01.PNG" alt="Content Image">
             </div>
         </div>
         <!-- End Promo Section -->

@@ -7,7 +7,7 @@ spring:
     database: POSTGRESQL
     show-sql: true
     hibernate:
-      ddl-auto: create-update
+      ddl-auto: create-drop
   datasource:
     url: ${JDBC_DATABASE_URL}
     username: postgres

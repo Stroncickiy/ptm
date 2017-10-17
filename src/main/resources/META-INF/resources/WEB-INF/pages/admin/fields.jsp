@@ -27,7 +27,9 @@
                        cache: false,
                        data: data
                      }).done(function(response){
+                         $('a[href="#tab_content1"]').tab('show');
                          loadFields();
+                         form.reset();
                      });
                      return false;
                  }

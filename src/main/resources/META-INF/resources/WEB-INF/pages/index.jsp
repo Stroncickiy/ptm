@@ -59,6 +59,20 @@
                         </div>
                     </div>
                 </div>
+                 <div class="item">
+                <img class="img-responsive" src="/resources/img/1920x1080/01.jpg" alt="Slider Image">
+                <div class="container">
+                         <div class="carousel-centered">
+                        <div class="margin-b-40">
+                            <h5 class="carousel-title">Кафедра Приладів Точної Механіки</h5>
+                            <p>Ми надаємо інженерно-наукові послуги і відкриті для співпраці. Якщо ви зацікавлення, звяжіться з нами для продуктивної роботи.
+                            </p>
+                        </div>
+                        <a href="/contacts" class="btn-theme btn-theme-sm btn-white-brd text-uppercase">Контакти</a>
+                    </div>
+                </div>
+            </div>
+
             </div>
         </div>
         <!--========== SLIDER ==========-->
@@ -72,46 +86,21 @@
                 </div>
             </div>
             <!--// end row -->
-
             <div class="row">
+                <c:forEach items="${news}" var="newsItem">
                 <!-- Latest Products -->
                 <div class="col-sm-4 sm-margin-b-50">
                     <div class="margin-b-20">
                         <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
-                            <img class="img-responsive" src="/resources/img/970x647/01.jpg" alt="Latest Products Image">
+                            <img class="img-responsive" src="/images/news?id=${newsItem.id}" alt="Latest News Image">
                         </div>
                     </div>
-                    <h4><a href="#">Кафедра взяла участь у виставці електроніки</a></h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor</p>
-                    <a class="link" href="#">Read More</a>
+                    <h4><a href="#">${newsItem.title}</a></h4>
+                    <p>${newsItem.description}</p>
+                    <a class="link" href="/news/${newsItem.id}">Читати більше</a>
                 </div>
                 <!-- End Latest Products -->
-
-                <!-- Latest Products -->
-                <div class="col-sm-4 sm-margin-b-50">
-                    <div class="margin-b-20">
-                        <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
-                            <img class="img-responsive" src="/resources/img/970x647/02.jpg" alt="Latest Products Image">
-                        </div>
-                    </div>
-                    <h4><a href="#">Наші студенти завоювали золото на олімпіаді</a></h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor</p>
-                    <a class="link" href="#">Read More</a>
-                </div>
-                <!-- End Latest Products -->
-
-                <!-- Latest Products -->
-                <div class="col-sm-4 sm-margin-b-50">
-                    <div class="margin-b-20">
-                        <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
-                            <img class="img-responsive" src="/resources/img/970x647/03.jpg" alt="Latest Products Image">
-                        </div>
-                    </div>
-                    <h4><a href="#">Додано новий напрямок: моделювання мехаронних систем</a></h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor</p>
-                    <a class="link" href="#">Read More</a>
-                </div>
-                <!-- End Latest Products -->
+                </c:forEach>
             </div>
             <!--// end row -->
         </div>

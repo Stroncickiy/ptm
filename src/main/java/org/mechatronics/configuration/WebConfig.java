@@ -11,12 +11,9 @@ import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletCon
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.annotation.PropertySources;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.web.multipart.MultipartResolver;
-import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -27,7 +24,6 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @SpringBootApplication
 @EnableJpaRepositories(basePackages = "org.mechatronics.repositories")
 @ComponentScan(basePackages = "org.mechatronics.*")
-@PropertySources({@PropertySource("classpath:app.properties")})
 @EnableWebMvc
 @EntityScan(basePackages = "org.mechatronics.model")
 @EnableAutoConfiguration(exclude = {ErrorMvcAutoConfiguration.class})
@@ -59,6 +55,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         return new TomcatEmbeddedServletContainerFactory();
 
     }
+
     @Bean
     public MultipartResolver multipartResolver() {
         return new StandardServletMultipartResolver();
