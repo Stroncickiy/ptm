@@ -25,7 +25,7 @@
                     <div class="collapse navbar-collapse nav-collapse">
                         <div class="menu-container">
                             <ul class="navbar-nav navbar-nav-right">
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover active" href="/">Головна</a></li>
+                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="/">Головна</a></li>
                                 <li class="nav-item"><a class="nav-item-child nav-item-hover" href="/about">Про кафедру</a></li>
                                 <li class="nav-item"><a class="nav-item-child nav-item-hover" href="/news">Новини</a></li>
                                 <li class="nav-item"><a class="nav-item-child nav-item-hover" href="/advertisement">Абітурієнту</a></li>

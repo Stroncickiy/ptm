@@ -38,106 +38,34 @@
             </div>
         </div>
         <!--========== PARALLAX ==========-->
-
-        <!--========== PAGE LAYOUT ==========-->
-        <!-- Pricing -->
-        <div class="bg-color-sky-light">
-            <div class="content-lg container">
-                <div class="row row-space-1">
-                    <div class="col-sm-4 sm-margin-b-2">
-                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".1s">
-                            <!-- Pricing -->
-                            <div class="pricing">
-                                <div class="margin-b-30">
-                                    <i class="pricing-icon icon-chemistry"></i>
-                                    <h3>Starter Kit <span> - $</span> 49</h3>
-                                    <p>Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                                </div>
-                                <ul class="list-unstyled pricing-list margin-b-50">
-                                    <li class="pricing-list-item">Basic Features</li>
-                                    <li class="pricing-list-item">Up to 5 products</li>
-                                    <li class="pricing-list-item">50 Users Panels</li>
-                                </ul>
-                                <a href="pricing.html" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Choose</a>
-                            </div>
-                            <!-- End Pricing -->
-                        </div>
+ <!--========== PAGE LAYOUT ==========-->
+        <!-- About -->
+        <div class="content-lg container">
+            <div class="row">
+                <div class="col-sm-7 sm-margin-b-50">
+                    <div class="margin-b-30">
+                     <p>Напрям підготовки «Приладобудування» поєднує поглиблене вивчення дисциплін професійної та практичної підготовки
+                     (основи мехатроніки, сенсори в мехатроніці, електромеханічні та оптикомеханічні вузли мехатроніки, розрахунок механічних вузлів
+                      мехатронних засобів, комп’ютерне конструювання механічних та електронних пристроїв мехатроніки, проектування механізмів мехатронних засобів,
+                      проектування віртуальних мехатронних систем) з вивченням дисциплін гуманітарної та соціально-економічної підготовки та дисциплін природничо-наукової
+                      підготовки (вища математика, фізика, хімія, теоретична механіка, теорія електричних кіл, інформатика). </p>
                     </div>
-                    <div class="col-sm-4 sm-margin-b-2">
-                        <div class="wow fadeInUp" data-wow-duration=".3" data-wow-delay=".2s">
-                            <!-- Pricing -->
-                            <div class="pricing pricing-active">
-                                <div class="margin-b-30">
-                                    <i class="pricing-icon icon-badge"></i>
-                                    <h3>Professional <span> - $</span> 149</h3>
-                                    <p>Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                                </div>
-                                <ul class="list-unstyled pricing-list margin-b-50">
-                                    <li class="pricing-list-item">Basic Features</li>
-                                    <li class="pricing-list-item">Up to 100 products</li>
-                                    <li class="pricing-list-item">100 Users Panels</li>
-                                </ul>
-                                <a href="pricing.html" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Choose</a>
-                            </div>
-                            <!-- End Pricing -->
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="wow fadeInRight" data-wow-duration=".3" data-wow-delay=".1s">
-                            <!-- Pricing -->
-                            <div class="pricing">
-                                <div class="margin-b-30">
-                                    <i class="pricing-icon icon-shield"></i>
-                                    <h3>Advanced <span> - $</span> 249</h3>
-                                    <p>Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                                </div>
-                                <ul class="list-unstyled pricing-list margin-b-50">
-                                    <li class="pricing-list-item">Extended Features</li>
-                                    <li class="pricing-list-item">Unlimited products</li>
-                                    <li class="pricing-list-item">Unlimited Users Panels</li>
-                                </ul>
-                                <a href="pricing.html" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Choose</a>
-                            </div>
-                            <!-- End Pricing -->
-                        </div>
-                    </div>
+                     <p> Це дає можливість готувати фахівців для вирішення цілого ряду актуальних завдань в галузях, що передбачають проектування (конструювання),
+                     технологію виготовлення, дослідження, випробовування, монтаж та установлення, обслуговування, відновлення та модернізацію мехатронних апаратів
+                      широкого призначення. Навчання студентів відбувається в навчальних аудиторіях та спеціалізованих лабораторіях. Для викладання дисциплін циклу
+                       професійної та практичної підготовки використовуються навчальні матеріали провідних вітчизняних та зарубіжних видавництв і фірм, що працюють у
+                        галузі приладобудування та систем мехатроніки. Випускники можуть виконувати практичні роботи та наукові дослідження в таких основних напрямах:
+                        розрахунок механічних вузлів мехатронних засобів, електромеханічні та оптикомеханічні вузли мехатроніки, технологія мехатронних засобів, комп’ютерне
+                         конструювання механічних та електронних пристроїв мехатроніки, проектування механізмів мехатронних засобів, проектування інтелектуальних та віртуальних мехатронних систем,
+                     програмне забезпечення мехатронних засобів, запис і відтворення інформації, мережі інформаційного забезпечення мехатронних систем.</p>
                 </div>
-                <!--// end row -->
-            </div>
-        </div>
-        <!-- End Pricing -->
-        <!-- Clients -->
-        <div class="bg-color-sky-light">
-            <div class="content-lg container">
-                <!-- Swiper Clients -->
-                <div class="swiper-slider swiper-clients">
-                    <!-- Swiper Wrapper -->
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img class="swiper-clients-img" src="/resources/img/clients/01.png" alt="Clients Logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="swiper-clients-img" src="/resources/img/clients/02.png" alt="Clients Logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="swiper-clients-img" src="/resources/img/clients/03.png" alt="Clients Logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="swiper-clients-img" src="/resources/img/clients/04.png" alt="Clients Logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="swiper-clients-img" src="/resources/img/clients/05.png" alt="Clients Logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="swiper-clients-img" src="/resources/img/clients/06.png" alt="Clients Logo">
-                        </div>
-                    </div>
-                    <!-- End Swiper Wrapper -->
+                <div class="col-sm-4 col-sm-offset-1">
+                    <img class="img-responsive" src="/resources/img/640x380/01.jpg" alt="Our Office">
                 </div>
-                <!-- End Swiper Clients -->
             </div>
+            <!--// end row -->
         </div>
-        <!-- End Clients -->
+        <!-- End About -->
         <!--========== END PAGE LAYOUT ==========-->
 
         <jsp:include page="footer.jsp"></jsp:include>

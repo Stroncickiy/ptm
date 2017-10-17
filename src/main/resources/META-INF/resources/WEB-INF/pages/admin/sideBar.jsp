@@ -30,9 +30,11 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-bar-chart-o"></i>Галузі навчання<span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-bar-chart-o"></i>Інформація<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="/admin/fields">Керування</a></li>
+                      <li><a href="/admin/fields">Напрямки навчання</a></li>
+                      <li><a href="/admin/news">Новини</a></li>
+                      <li><a href="/admin/articles">Статті</a></li>
                     </ul>
                   </li>
                 </ul>
